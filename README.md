@@ -34,9 +34,15 @@ This project demonstrates the deployment of a cloud-hosted SSH honeypot monitori
 
 ---
 
+---
+
 # 🏗️ Architecture Overview
 
-The environment consists of two Ubuntu-based Amazon EC2 instances deployed within AWS. The first EC2 instance hosts the Cowrie SSH honeypot and listens for inbound SSH connections on TCP port **2222**. Captured events are securely forwarded to a second EC2 instance running Splunk Enterprise through the **HTTP Event Collector (HEC)** over TCP port **8088**. Splunk indexes the events in a dedicated **cowrie** index, where they can be searched, analyzed, and visualized using Search Processing Language (SPL).
+* Two Ubuntu-based Amazon EC2 instances deployed within AWS.
+* Cowrie SSH honeypot captures inbound SSH login attempts.
+* Security events are forwarded to Splunk Enterprise using the HTTP Event Collector (HEC).
+* Events are indexed in a dedicated **cowrie** index.
+* Splunk Search & Reporting is used to search, monitor, and visualize attack activity.
 
 ```text
                     Internet
@@ -57,13 +63,29 @@ The environment consists of two Ubuntu-based Amazon EC2 instances deployed withi
        SPL Searches • Dashboards • Analysis
 ```
 
-### Key Components
+---
 
-| Component                       | Purpose                                                                   |
-| ------------------------------- | ------------------------------------------------------------------------- |
-| **AWS EC2 (Cowrie)**            | Hosts the SSH honeypot and captures attacker activity.                    |
-| **Cowrie**                      | Simulates an SSH server and records login attempts and attacker commands. |
-| **HTTP Event Collector (HEC)**  | Securely forwards Cowrie events to Splunk.                                |
-| **AWS EC2 (Splunk Enterprise)** | Receives, indexes, and analyzes Cowrie event data.                        |
-| **Splunk Search & Reporting**   | Searches, visualizes, and monitors collected security events using SPL.   |
+# 🌐 Environment Configuration
+
+* **Cowrie Server:** Ubuntu EC2 instance running the Cowrie SSH honeypot.
+* **Splunk Server:** Ubuntu EC2 instance running Splunk Enterprise.
+* **SSH Management:** TCP Port **22** restricted to **My IP**.
+* **Cowrie Honeypot:** TCP Port **2222** open to capture SSH attack attempts.
+* **Splunk Web Interface:** TCP Port **8000** restricted to **My IP**.
+* **HTTP Event Collector (HEC):** TCP Port **8088** for secure event forwarding.
+* **Event Storage:** Dedicated **cowrie** index for centralized log collection.
+
+
+---
+
+# ⚙️ Implementation Summary
+
+* Deployed two Ubuntu-based Amazon EC2 instances for Cowrie and Splunk Enterprise.
+* Installed and configured the Cowrie SSH honeypot to capture SSH login attempts.
+* Installed and configured Splunk Enterprise on a dedicated EC2 instance.
+* Created a dedicated **cowrie** index and configured the HTTP Event Collector (HEC).
+* Integrated Cowrie with Splunk to securely forward JSON event data.
+* Validated end-to-end event ingestion using controlled SSH login attempts.
+* Configured the environment to continuously collect and analyze real-world SSH attack activity.
+
 
