@@ -2,7 +2,7 @@
 
 # 📌 Project Overview
 
-This project demonstrates how I built an SSH honeypot using AWS, Ubuntu Linux, Cowrie, and Splunk Enterprise to capture and analyze real-world SSH login attempts. Cowrie records the activity and forwards the events to Splunk, where they can be searched, monitored, and visualized. The project provided hands-on experience with Linux administration, AWS networking, SIEM integration, and security monitoring in a cloud environment.
+This project demonstrates how I built an SSH honeypot using AWS, Ubuntu Linux, Cowrie, and Splunk Enterprise. The environment captures SSH login attempts, forwards the events to Splunk for analysis, and provides hands-on experience with Linux, AWS, networking, and security monitoring.
 
 ---
 
