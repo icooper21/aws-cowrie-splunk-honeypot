@@ -89,3 +89,33 @@ This project demonstrates the deployment of a cloud-hosted SSH honeypot monitori
 * Configured the environment to continuously collect and analyze real-world SSH attack activity.
 
 
+---
+
+# ✅ Validation & Results
+
+* Successfully verified end-to-end event ingestion from Cowrie to Splunk Enterprise using HTTP Event Collector (HEC).
+* Confirmed SSH login attempts were captured, indexed, and searchable within the **cowrie** index.
+* Validated the environment using Splunk Search Processing Language (SPL) queries.
+* Configured the honeypot to continuously collect and monitor real-world SSH attack activity.
+
+### Sample SPL Queries
+
+```spl
+index=cowrie
+```
+
+```spl
+index=cowrie
+| stats count
+```
+
+```spl
+index=cowrie
+| top src_ip
+```
+
+```spl
+index=cowrie
+| top username
+```
+
