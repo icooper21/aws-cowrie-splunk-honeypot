@@ -1,12 +1,12 @@
 # 🛡️ AWS Cloud SSH Honeypot Monitoring Lab (Cowrie + Splunk Enterprise)
 
-## 📌 Project Overview
+# 📌 Project Overview
 
 This project demonstrates the deployment of a cloud-hosted SSH honeypot monitoring solution using **AWS**, **Ubuntu**, **Cowrie**, and **Splunk Enterprise**. SSH login attempts are captured by Cowrie, securely forwarded to Splunk through the **HTTP Event Collector (HEC)**, and analyzed using Splunk's Search Processing Language (SPL). The environment simulates a real-world Security Operations Center (SOC) workflow for centralized log collection and security monitoring.
 
 ---
 
-## 🎯 Objectives
+# 🎯 Objectives
 
 * Deploy a cloud-hosted Cowrie SSH honeypot on AWS.
 * Deploy Splunk Enterprise as a centralized SIEM.
@@ -16,7 +16,7 @@ This project demonstrates the deployment of a cloud-hosted SSH honeypot monitori
 
 ---
 
-## 🛠️ Technologies Used
+# 🛠️ Technologies Used
 
 * Amazon Web Services (AWS)
 * Amazon EC2
