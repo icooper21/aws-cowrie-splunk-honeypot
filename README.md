@@ -119,3 +119,6 @@ index=cowrie
 | top username
 ```
 
+## 📸 Screenshots
+
+*(To be updated after collecting additional real-world attack activity.)*
