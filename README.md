@@ -122,3 +122,34 @@ index=cowrie
 ## 📸 Screenshots
 
 *(To be updated after collecting additional real-world attack activity.)*
+
+
+---
+
+# 💡 Skills Demonstrated
+
+* AWS Cloud Infrastructure
+* Linux Administration
+* Network Security
+* Splunk Enterprise (SIEM)
+* HTTP Event Collector (HEC)
+* SSH & Secure Remote Administration
+* Security Monitoring & Log Analysis
+* Search Processing Language (SPL)
+* Troubleshooting & Root Cause Analysis
+
+---
+
+# 📚 Lessons Learned
+
+* Strengthened Linux system administration and troubleshooting skills.
+* Gained hands-on experience deploying and integrating a SIEM solution.
+* Developed a deeper understanding of secure log collection and event analysis.
+* Reinforced the importance of validating end-to-end connectivity in cloud environments.
+
+---
+
+# 🚀 Future Enhancements
+
+*This section will be updated as additional real-world SSH attack activity is collected and analyzed.*
+
