@@ -121,8 +121,38 @@ index=cowrie
 
 ## 📸 Screenshots
 
-*(To be updated after collecting additional real-world attack activity.)*
+### Cowrie Honeypot – Splunk Security Dashboard
 
+This dashboard provides an overview of the activity captured by the Cowrie honeypot. I used Splunk to monitor incoming SSH connections, review authentication attempts, and get a better picture of how external sources were interacting with the system.
+![Cowrie Attack Activity](01_Cowrie_Splunk_Dashboard.png)
+
+
+
+### Splunk Raw Event Logs
+
+This screenshot shows the raw events collected by the Cowrie honeypot and displayed in Splunk. Each event provides details such as timestamps, source IP addresses, destination ports, and SSH activity, allowing me to examine individual connection attempts and identify suspicious behavior.
+
+![Cowrie Attack Activity](02_Splunk_Raw_Events.png)
+
+### Source IP Address Analysis
+
+This screenshot shows the different IP addresses that attempted to connect to the Cowrie honeypot. Using Splunk, I was able to identify where connection attempts were coming from and see which sources were generating the most activity.
+
+![Cowrie Attack Activity](03_Source_IP_Analysis.png)
+
+
+### SSH Authentication Attempts
+
+This screenshot shows authentication attempts captured by the Cowrie honeypot and recorded in Splunk. The logs provide insight into how external sources attempted to access the system, including the usernames used and whether the login attempts succeeded or failed.
+
+![Cowrie Attack Activity](04_Authentication_Attempts.png)
+
+
+### Commands Executed During SSH Sessions
+
+This screenshot shows commands entered by external sources after gaining access to the simulated SSH environment. Commands such as `whoami` and `exit` were captured by Cowrie and logged in Splunk, providing insight into how attackers interacted with the honeypot after authentication.
+
+![Cowrie Attack Activity](05_Commands_Executed.png)
 
 ---
 
